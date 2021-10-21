@@ -1,0 +1,63 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.dates_produit{
+    font-size: 1rem;
+}
+
+.comments{
+    font-size: 0.8rem;
+    margin: 0;
+    font-style: italic;
+}
+
+.responsive_display{
+    display: none;
+}
+
+
+/*** Responsive page gestion_membres et geqtion_salles ****/
+@media only screen and (max-width:800px){
+    #affichage_vertical tbody, #affichage_vertical tr, #affichage_vertical td {
+        display: block;
+    }
+    #affichage_vertical thead tr{
+        position: absolute;
+        top:-9999px;
+        left:-9999px;
+    }
+    #affichage_vertical td{
+        position: relative;
+        padding-left:28%;
+        border:none;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0rem;
+        padding-top: 0rem;
+        font-size: .8rem;
+    }
+
+    .responsive_display{
+        display:inline-block;
+        margin-left: 42px;
+    }
+    .responsive_hidden{
+        display:none;
+    }
+
+    #affichage_vertical td:before {
+        content: attr(data-title);
+        position: absolute;
+        left: 6px;
+        font-weight: bold;
+        font-size : 0.8rem;
+    }
+    #affichage_vertical tr{
+        border-bottom: 2px solid rgb(0, 0, 0);
+        padding: .8rem 0 .8rem 0;
+    }
+
+   
+
+  
+}
